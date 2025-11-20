@@ -1,0 +1,189 @@
+.camera-container {
+  position: relative;
+  z-index: 20;
+  filter: drop-shadow(0 20px 30px rgba(0,0,0,0.3));
+}
+
+.camera-body {
+  width: 400px;
+  height: 380px;
+  background-color: #f3e5c2; /* Retro Beige */
+  border-radius: 60px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 
+    inset 0 -10px 20px rgba(0,0,0,0.1),
+    inset 0 10px 20px rgba(255,255,255,0.5);
+}
+
+.camera-face {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Top Section: Flash and Viewfinder */
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+.flash-unit {
+  width: 100px;
+  height: 60px;
+  background: #333;
+  border-radius: 10px;
+  border: 4px solid #dcdcdc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 10px black;
+}
+
+.flash-glass {
+  width: 80%;
+  height: 60%;
+  background: linear-gradient(135deg, #555, #888, #555);
+  border-radius: 4px;
+}
+
+.viewfinder {
+  width: 60px;
+  height: 60px;
+  background: #111;
+  border-radius: 50%;
+  border: 4px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.viewfinder-glass {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.4), transparent 60%), #000;
+}
+
+/* Lens Section */
+.lens-section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 240px;
+  height: 240px;
+}
+
+.lens-outer-ring {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e0e0e0, #fff);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+}
+
+.lens-mid-ring {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: #d6c8a8; /* Slightly darker beige ring */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgba(0,0,0,0.1);
+}
+
+.lens-inner-ring {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #333, #000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 20px #000;
+  border: 5px solid #666; /* Metallic rim */
+}
+
+.lens-glass {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  background: #000;
+  box-shadow: inset 0 0 20px #000;
+}
+
+.webcam-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Shutter Button */
+.shutter-section {
+  position: absolute;
+  bottom: 60px;
+  left: 40px;
+}
+
+.shutter-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #e6beaa; /* Base surrounding shutter */
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  transition: transform 0.1s;
+}
+
+.shutter-button:active {
+  transform: scale(0.95);
+}
+
+.shutter-inner {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #d9534f; /* Red button */
+  box-shadow: inset 0 -2px 5px rgba(0,0,0,0.2);
+}
+
+.camera-hole {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 50%;
+}
+
+.photo-output-slot {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  height: 10px;
+  background: #222;
+  border-radius: 5px 5px 0 0;
+  z-index: -1;
+}
+

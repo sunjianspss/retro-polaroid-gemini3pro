@@ -1,0 +1,27 @@
+.app-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #d1d5db;
+  background-image: radial-gradient(#ffffff 1px, transparent 1px);
+  background-size: 20px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.camera-wrapper {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  z-index: 50; /* Above photos initially, but photos need to come out from behind? */
+  /* Actually, if photos come out of top slot, they might be BEHIND the front face but ABOVE the back body? 
+     Easier if they are z-index lower than camera, slide up, then user drags them away. */
+}
+
+.photo-wall {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
